@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+input {
+    font-size: 14px;
+    padding: 6px 8px;
+    width: 100%;
+    border-color: black;
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+.container {
+    max-width: 748px;
+    border: 1px solid black;
+    border-radius: 8px;
+    margin: auto;
+}
+
+.signup-main-wrapper .container{
+        /* padding: 36px 24px 24px 24px; */
+        padding: 48px 40px 36px;
+}
+
+.signup-main-wrapper .signup-wrapper {
+    justify-content: space-between;
+    gap: 48px;
+}
+
+.flex {
+    display: flex;
+}
+
+.signup-left-part {
+    width: 354px;
+}
+/* .google-logo-image{
+    padding-bottom: 16px;
+} */
+
+.google-logo-image img {
+    width: 75px;
+}
+
+.main-title {
+    padding-top: 16px;
+}
+
+.main-title>p {
+    font-family: "Google Sans", "Noto Sans Myanmar UI", arial, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.3333;
+    color: #202124;
+    word-break: break-word;
+}
+
+.signup-form {
+    display: inline-block;
+    font-size: 14px;
+    width: 100%;
+    padding-top: 24px;
+}
+
+.signup-right-part {
+    max-width: 244px;
+}
+
+.name-take {
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.name-take>div {
+    flex: 1;
+}
+
+.name-take input {
+    width: 100%;
+}
+
+.mail-wrapper-div {
+    padding-top: 24px;
+}
+
+.mail-rule>p,
+.password-rule>p {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.4286;
+    color: #5f6368;
+    padding-left: 10px;
+}
+
+.use-current-address {
+    padding: 14px 0;
+}
+
+.use-current-address>p,
+.sign-in-tag>p {
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-size: 0.875rem;
+    letter-spacing: .0107142857em;
+    font-weight: 500;
+    text-transform: none;
+    /* color:#174ea6; */
+    color: #1a73e8;
+}
+
+.password-take {
+    gap: 8px;
+    padding-top: 24px;
+}
+
+.show-pass-div {
+    align-items: center;
+}
+
+.show-pass-div input {
+    width: 18px;
+    height: 18px;
+}
+
+.checkbox-effect {
+    padding: 17px;
+}
+
+.show-password-title>p {
+    font-family: roboto, "Noto Sans Myanmar UI", arial, sans-serif;
+    font-size: 14px;
+    color: #202124;
+    line-height: 1.4286;
+}
+
+.signin-submit-wrapper {
+    justify-content: space-between;
+    padding: 100px 0 6px 0;
+    align-items: center;
+}
+
+.submit-btn {
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-size: .875rem;
+    letter-spacing: .0107142857em;
+    font-weight: 500;
+    text-transform: none;
+    border-radius: 4px;
+    color: #fff;
+    padding: 10px 24px;
+    background-color: #1a73e8;
+}
+
+.signup-right-part .signup-quotes{
+    color: #202124;
+    font-family: roboto,"Noto Sans Myanmar UI",arial,sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1.4286;
+}
+
+.transaction-relative{
+    position: relative;
+    padding-top: 8px;
+}
+
+.form-transaction{
+    position: absolute;
+    left: 2px;
+    top: 0;
+    background-color: white;
+}
+
+.transaction-relative>span{
+    /* z-index: -1; */
+}
+
+.transaction-relative>input:not(:focus)+span{
+    visibility: visible;
+    transform: translate(12%, 86%) scale(100%);
+    transition-duration: .3s;
+}
+
+.transaction-relative>input:focus+span{
+    visibility: visible;
+    transform: translate(-5%, 0) scale(80%);
+    transition-duration: .3s;
+}
