@@ -16,22 +16,31 @@ button {
 
 input {
     font-size: 14px;
+    line-height: 24px;
     padding: 6px 8px;
     width: 100%;
     border-radius: 4px;
     background-color: transparent;
     outline: none;
+    border: 1px solid #dadce0;
 }
 
 .container {
     max-width: 748px;
-    border: 1px solid black;
+    border: 1px solid #dadce0;
     border-radius: 8px;
     margin: auto;
 }
 
+.container-2 {
+    max-width: 448px;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    margin: auto;
+    padding: 48px 40px 36px;
+}
+
 .signup-main-wrapper .container{
-        /* padding: 36px 24px 24px 24px; */
         padding: 48px 40px 36px;
 }
 
@@ -47,9 +56,6 @@ input {
 .signup-left-part {
     width: 354px;
 }
-/* .google-logo-image{
-    padding-bottom: 16px;
-} */
 
 .google-logo-image img {
     width: 75px;
@@ -84,14 +90,6 @@ input {
     gap: 8px;
 }
 
-.name-take>div {
-    flex: 1;
-}
-
-.name-take input {
-    width: 100%;
-}
-
 .mail-wrapper-div {
     padding-top: 24px;
 }
@@ -117,11 +115,11 @@ input {
     letter-spacing: .0107142857em;
     font-weight: 500;
     text-transform: none;
-    /* color:#174ea6; */
     color: #1a73e8;
 }
 
 .password-take {
+    justify-content: space-between;
     gap: 8px;
     padding-top: 24px;
 }
@@ -146,7 +144,7 @@ input {
     line-height: 1.4286;
 }
 
-.signin-submit-wrapper {
+.submit-wrapper {
     justify-content: space-between;
     padding: 100px 0 6px 0;
     align-items: center;
@@ -176,6 +174,7 @@ input {
 .transaction-relative{
     position: relative;
     padding-top: 8px;
+    flex: 1;
 }
 
 .form-transaction{
@@ -187,6 +186,12 @@ input {
 
 .transaction-relative>span{
    pointer-events: none;
+   font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;;
+   color: #5f6368;
+   font-size: 16px;
+   font-weight: 400;
+   background-color: transparent;
+   padding: 0 3px;
 }
 
 .transaction-relative>input:focus{
@@ -194,18 +199,50 @@ input {
     /* outline: none; */
 }
 
+.signup-main-wrapper{
+    padding-top: 15vh;
+}
+
 .transaction-relative>input:not(:focus)+span{
     transform: translate(12%, 86%) scale(100%);
-    transition-duration: .3s;
+    transition-duration: .15s;
+    background-color: transparent;
 }
 
 .transaction-relative>input:focus+span{
-    transform: translate(-5%, 0) scale(80%);
-    transition-duration: .3s;
+    transform: translate(-12%, -8%) scale(70%);
+    transition-duration: .15s;
     color: #1a73e8;
+    background-color: #fff;
 }
 
 /* validation classes */
 .border-red{
     border-color: #ff0000;
 }
+
+.visible{
+    display: block ! important;
+}
+
+.hidden{
+    display: none;
+}
+
+.empty-field-alart>p{
+    font-family: roboto,"Noto Sans Myanmar UI",arial,sans-serif;
+    font-size: 12px;
+    color: #d93025;
+    line-height: 1.4286;
+}
+
+.empty-field-alart>p:before {
+    content: "";
+    background: url(./image/alert-icon.png) no-repeat;
+    background-size: 18px;
+    background-position: left;
+    padding: 12px;
+}
+
+
+/* Sign-in email page */

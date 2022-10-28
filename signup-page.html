@@ -21,7 +21,7 @@
             <form action="" class="signup-form"  method="post">
               <div class="name-take flex">
                 <div class="transaction-relative">
-                  <input type="text" class="f-name" />
+                  <input type="text" class="f-name" autofocus/>
                   <span class="form-transaction">First name</span>
                 </div>
                 <div class="transaction-relative">
@@ -29,6 +29,9 @@
                   <span class="form-transaction">Last name</span>
                 </div>
               </div>
+              <div class="empty-field-alart empty-field-alart-1 hidden"><p>Enter first name and surname</p></div>
+              <div class="empty-field-alart empty-field-alart-2 hidden"><p>Enter first name</p></div>
+              <div class="empty-field-alart empty-field-alart-3 hidden"><p>Enter last name</p></div>
               <div class="mail-wrapper-div">
                 <div class="transaction-relative">
                 <input type="text" class="mail"/>
@@ -38,6 +41,8 @@
               <div class="mail-rule">
                 <p>You can use letters, numbers & periods</p>
               </div>
+              <div class="empty-field-alart empty-field-alart-4 hidden"><p>Choose a Gmail address</p></div>
+              <!-- <div class="empty-field-alart empty-field-alart-5 hidden"><p>That username is taken. Try another.</p></div> -->
               <button class="use-current-address">
                 <p>Use my current email address instead</p>
               </button>
@@ -46,6 +51,7 @@
                   <input type="password" class="password" />
                   <span class="form-transaction">Password</span>
                 </div>
+    
                 <div class="transaction-relative">
                   <input type="password" class="confirm-password"/>
                   <span class="form-transaction">Confirm</span>
@@ -57,6 +63,10 @@
                   symbols
                 </p>
               </div>
+              <div class="empty-field-alart empty-field-alart-6 hidden"><p>Enter a password</p></div>
+              <div class="empty-field-alart empty-field-alart-7 hidden"><p>Use 8 characters or more for your password</p></div>
+              <div class="empty-field-alart empty-field-alart-8 hidden"><p>Confirm your password</p></div>
+              <div class="empty-field-alart empty-field-alart-9 hidden"><p>Those passwords didn’t match. Try again.</p></div>
               <div class="show-pass-div flex">
                 <div class="checkbox-effect">
                   <span>
@@ -65,9 +75,8 @@
                 </div>
                 <div class="show-password-title"><p>Show password</p></div>
               </div>
-              <div class="signin-submit-wrapper flex">
-                <a href="./sign-in-email.html" class="sign-in-tag"><p>Sign in instead</p></a
-                >
+              <div class="submit-wrapper flex">
+                <a href="./sign-in-email.html" class="sign-in-tag"><p>Sign in instead</p></a>
                 <button class="submit-btn" type="submit" onclick="return validation()">Submit</button>
               </div>
             </form>
