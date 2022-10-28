@@ -18,20 +18,20 @@
         </div>
         <div class="signup-wrapper flex">
           <div class="signup-left-part">
-            <form action="submit" class="signup-form">
+            <form action="" class="signup-form"  method="post">
               <div class="name-take flex">
                 <div class="transaction-relative">
                   <input type="text" class="f-name" />
                   <span class="form-transaction">First name</span>
                 </div>
                 <div class="transaction-relative">
-                  <input type="text" class="l-name" />
+                  <input type="text" class="l-name"/>
                   <span class="form-transaction">Last name</span>
                 </div>
               </div>
               <div class="mail-wrapper-div">
                 <div class="transaction-relative">
-                <input type="text" class="mail" />
+                <input type="text" class="mail"/>
                 <span class="form-transaction">Username</span>
             </div>
               </div>
@@ -47,7 +47,7 @@
                   <span class="form-transaction">Password</span>
                 </div>
                 <div class="transaction-relative">
-                  <input type="password" class="confirm-password" />
+                  <input type="password" class="confirm-password"/>
                   <span class="form-transaction">Confirm</span>
                 </div>
               </div>
@@ -68,7 +68,7 @@
               <div class="signin-submit-wrapper flex">
                 <a href="./sign-in-email.html" class="sign-in-tag"><p>Sign in instead</p></a
                 >
-                <button class="submit-btn">Submit</button>
+                <button class="submit-btn" type="submit" onclick="return validation()">Submit</button>
               </div>
             </form>
           </div>

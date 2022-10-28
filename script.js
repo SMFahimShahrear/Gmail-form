@@ -1,14 +1,33 @@
 let password_show_checkbox = document.querySelector("#checkbox-show-pass");
-let password_input = document.querySelector(".password");
+let password_field = document.querySelector(".password");
+let mail_field = document.querySelector(".mail");
+form_transition = document.querySelectorAll(".form-transaction");
 
-
-
+console.log(form_transition);
 function password_visibility(e){
-    console.log("function_called");
     if(e.checked == true){
-// else if(password_input.checked == false){
-    // e.type = "text";
-    console.log(password_input.type)
-    console.log("pass");
+        password_field.type = "text";
+        // document.querySelector(".main-title").innerText = 'Yoooo';
+    }
+    
+
+    else{
+        password_field.type = "password";
+    }
 }
+
+// validation
+function validation(){
+    if(mail_field.value == ''){
+        mail_field.classList.add("border-red");
+        // mail_field.style.borderColor = "red";
+    }
+
+
+    if(password_field.value == ''){
+        password_field.classList.add("border-red");
+    }
+    document.querySelector(".main-title").innerText = 'Yoooo';
+    return false;
 }
+

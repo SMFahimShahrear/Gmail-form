@@ -18,9 +18,9 @@ input {
     font-size: 14px;
     padding: 6px 8px;
     width: 100%;
-    border-color: black;
     border-radius: 4px;
     background-color: transparent;
+    outline: none;
 }
 
 .container {
@@ -186,17 +186,26 @@ input {
 }
 
 .transaction-relative>span{
-    /* z-index: -1; */
+   pointer-events: none;
+}
+
+.transaction-relative>input:focus{
+    border-color: #1a73e8;
+    /* outline: none; */
 }
 
 .transaction-relative>input:not(:focus)+span{
-    visibility: visible;
     transform: translate(12%, 86%) scale(100%);
     transition-duration: .3s;
 }
 
 .transaction-relative>input:focus+span{
-    visibility: visible;
     transform: translate(-5%, 0) scale(80%);
     transition-duration: .3s;
+    color: #1a73e8;
+}
+
+/* validation classes */
+.border-red{
+    border-color: #ff0000;
 }
