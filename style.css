@@ -25,6 +25,21 @@ input {
     border: 1px solid #dadce0;
 }
 
+.checkbox-effect{
+    border-radius: 50%;
+    padding: 11px 12px 9px 12px; 
+}
+
+.checkbox-effect:hover{
+    background-color: #ececec;
+    transition: all ease-out .3s;
+}
+
+.check-box-hover-color:hover{
+    background-color: #c7cbff;
+}
+
+
 .container {
     max-width: 748px;
     border: 1px solid #dadce0;
@@ -33,11 +48,20 @@ input {
 }
 
 .container-2 {
+    flex-direction: column;
+    align-items: center;
     max-width: 448px;
     border: 1px solid #dadce0;
     border-radius: 8px;
     margin: auto;
     padding: 48px 40px 36px;
+}
+
+.signup-main-wrapper,
+.sign-in-email,
+.sign-in-pass{
+    padding-top: 10vh;
+
 }
 
 .signup-main-wrapper .container{
@@ -133,10 +157,6 @@ input {
     height: 18px;
 }
 
-.checkbox-effect {
-    padding: 17px;
-}
-
 .show-password-title>p {
     font-family: roboto, "Noto Sans Myanmar UI", arial, sans-serif;
     font-size: 14px;
@@ -199,10 +219,6 @@ input {
     /* outline: none; */
 }
 
-.signup-main-wrapper{
-    padding-top: 15vh;
-}
-
 .transaction-relative>input:not(:focus)+span{
     transform: translate(12%, 86%) scale(100%);
     transition-duration: .15s;
@@ -214,6 +230,10 @@ input {
     transition-duration: .15s;
     color: #1a73e8;
     background-color: #fff;
+}
+
+.input-filled{
+    transform: translate(-12%, -8%) scale(70%) !important;
 }
 
 /* validation classes */
@@ -234,6 +254,7 @@ input {
     font-size: 12px;
     color: #d93025;
     line-height: 1.4286;
+    padding-top: 5px;
 }
 
 .empty-field-alart>p:before {
@@ -245,4 +266,111 @@ input {
 }
 
 
+.sign-in-email{
+    padding: 15vh;
+}
+
+.welcome{
+    height: 100vh;
+    /* background-color: red; */
+    background: url(./image/welcome.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.welcome img{
+    height: 100vh;
+}
+
 /* Sign-in email page */
+.sign-in-email input,
+.sign-in-pass input{
+color: #202124;
+font-size: 16px;
+height: 28px;
+padding: 20px 15px;
+}
+
+.subtitle{
+    padding-top: 7px;
+}
+
+.sign-in-email .transaction-relative>input:not(:focus)+span,
+.sign-in-pass .transaction-relative>input:not(:focus)+span{
+    transform: translate(12%, 95%) scale(100%);
+    transition-duration: .15s;
+    background-color: transparent;
+}
+
+.forget{
+    padding-top: 10px;
+    padding-bottom: 45px;
+}
+
+.forget a,
+.learn-more a{
+font-family: roboto,"Noto Sans Myanmar UI",arial,sans-serif;
+color: #1a73e8;
+display: inline-block;
+font-weight: 500;
+letter-spacing: .25px;
+font-size: 14px;
+}
+
+.not-your-computer p{
+    font-family: roboto,"Noto Sans Myanmar UI",arial,sans-serif;
+    color: #5f6368;
+    font-size: 14px;
+    line-height: 1.4286;
+}
+
+.submit-wrapper>div{
+    padding: 8px;
+    border-radius: 10px;
+    transition: all ease-in .15s;
+}
+
+.submit-wrapper>div:hover{
+    background-color: #b7d6ff;
+}
+
+.sign-in-email .submit-wrapper,
+.sign-in-pass .submit-wrapper{
+    padding-top: 50px;
+}
+
+@media only screen and (max-width: 901px) {
+   .signup-right-part{
+    display: none;
+   }
+
+   .signup-main-wrapper .signup-wrapper {
+        flex-direction: column;
+   }
+
+
+.signup-left-part {
+    width: 100%;
+    transition: all ease .5s;
+}
+
+}
+
+@media only screen and (max-width: 601px) {
+    .name-take,
+    .password-take {
+        flex-direction: column;
+    }
+
+    .signup-main-wrapper {
+        padding: 15vh 5vh;
+    }
+
+    .sign-in-email{
+        padding: 15vh 0;
+    }
+
+    .container-2{
+        max-width: 100%;
+        transition: all ease .2s;
+    }
+}
