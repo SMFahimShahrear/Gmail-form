@@ -210,7 +210,6 @@ input {
    color: #5f6368;
    font-size: 16px;
    font-weight: 400;
-   background-color: transparent;
    padding: 0 3px;
 }
 
@@ -222,7 +221,6 @@ input {
 .transaction-relative>input:not(:focus)+span{
     transform: translate(12%, 86%) scale(100%);
     transition-duration: .15s;
-    background-color: transparent;
 }
 
 .transaction-relative>input:focus+span{
@@ -271,14 +269,16 @@ input {
 }
 
 .welcome{
+    width: 90%;
     height: 100vh;
+    margin: auto;
     /* background-color: red; */
-    background: url(./image/welcome.jpg) no-repeat center;
-    background-size: cover;
+    background: url(./image/google-logo-2.svg) no-repeat center;
+    background-size:contain;
 }
 
 .welcome img{
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 /* Sign-in email page */

@@ -40,11 +40,15 @@ function password_visibility2(e) {
 
 // validation
 function validation() {
+    // document.querySelectorAll(".empty-field-alart").classList.add("hidden");
     document.querySelector(".empty-field-alart-1").classList.add("hidden");
     document.querySelector(".empty-field-alart-2").classList.add("hidden");
     document.querySelector(".empty-field-alart-3").classList.add("hidden");
+    document.querySelector(".empty-field-alart-4").classList.add("hidden");
     document.querySelector(".empty-field-alart-5").classList.add("hidden");
     document.querySelector(".empty-field-alart-6").classList.add("hidden");
+    document.querySelector(".empty-field-alart-7").classList.add("hidden");
+    document.querySelector(".empty-field-alart-8").classList.add("hidden");
     document.querySelector(".empty-field-alart-9").classList.add("hidden");
     fname_field.classList.remove("border-red");
     lname_field.classList.remove("border-red");
@@ -77,35 +81,45 @@ function validation() {
         let check = localStorage.getItem(mail_field.value);
 
         if (check) {
-            sessionStorage.setItem("mailaddress", mail_field);////////////
-            console.log("ok bye");
+            sessionStorage.setItem("mailaddress", mail_field);
             error = 1;
             document.querySelector(".empty-field-alart-4").classList.add("hidden");
             document.querySelector(".empty-field-alart-5").classList.remove("hidden");
         }
     }
 
-
-
-
     if (password_field.value == "") {
         password_field.classList.add("border-red");
         document.querySelector(".empty-field-alart-6").classList.remove("hidden");
+        document.querySelector(".empty-field-alart-8").classList.add("hidden");
+        document.querySelector(".empty-field-alart-7").classList.add("hidden");
         document.querySelector(".password-rule").classList.add("hidden");
         error = 1;
     }
 
-    if (confirm_password_field.value == "") {
-        confirm_password_field.classList.add("border-red");
-        document.querySelector(".empty-field-alart-8").classList.remove("hidden");
+    else if(password_field.value.length < 7){
+        password_field.classList.add("border-red");
+        document.querySelector(".empty-field-alart-7").classList.remove("hidden");
+        document.querySelector(".empty-field-alart-8").classList.add("hidden");
         document.querySelector(".password-rule").classList.add("hidden");
         error = 1;
     }
-
-    if (password_field.value.localeCompare(confirm_password_field.value) == -1) {               //passowrd match
-        error = 1;
-        document.querySelector(".empty-field-alart-9").classList.remove("hidden");
-        document.querySelector(".password-rule").classList.add("hidden");
+    else {
+        if (confirm_password_field.value == "") {
+            confirm_password_field.classList.add("border-red");
+            document.querySelector(".empty-field-alart-8").classList.remove("hidden");
+            document.querySelector(".empty-field-alart-7").classList.add("hidden");
+            document.querySelector(".password-rule").classList.add("hidden");
+            error = 1;
+        }
+        else {
+            if (password_field.value.localeCompare(confirm_password_field.value) != 0) {               //passowrd match
+                error = 1;
+                document.querySelector(".empty-field-alart-9").classList.remove("hidden");
+                // document.querySelector(".empty-field-alart-8").classList.add("hidden");
+                document.querySelector(".password-rule").classList.add("hidden");
+            }
+        }
     }
 
     if (error == 1) {
@@ -123,7 +137,7 @@ function emailAuth() {
     document.querySelector(".empty-field-alart-20").classList.add("hidden");
     let mail_field2 = document.querySelector('.mail-check').value;
     let check = localStorage.getItem(mail_field2);
-    
+
 
     if (mail_field2 == '') {
         document.querySelector(".empty-field-alart-21").classList.remove("hidden");
@@ -158,16 +172,16 @@ function passAuth() {
     let find = sessionStorage.getItem("mailaddress");
 
     if (password.value == '') {
-    document.querySelector(".empty-field-alart-31").classList.remove("hidden");
-    return false;
-}
+        document.querySelector(".empty-field-alart-31").classList.remove("hidden");
+        return false;
+    }
     if (find) {
         let str = localStorage.getItem(find);
         let position_start = str.search("pass:");
         let position_end = str.search("fname:");
         let pass = str.slice(position_start + 5, position_end);
-            console.log(pass);
-            console.log(password.value);
+        console.log(pass);
+        console.log(password.value);
         if (pass.localeCompare(password.value) == 0) {
             console.log("ok");
         }
@@ -176,7 +190,7 @@ function passAuth() {
             return false;
         }
     }
-    else{
+    else {
         window.alert("Error occured");
         return false;
     }
